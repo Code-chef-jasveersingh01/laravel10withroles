@@ -1,0 +1,111 @@
+.loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #4c86f9;
+    --second-color: #49a84c;
+    --third-color: #f6bb02;
+    --fourth-color: #f6bb02;
+    --fifth-color: #2196f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+    z-index: 99!important;
+   }
+
+   .loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+   }
+
+   .loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+   }
+
+   .loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+   }
+
+   .loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+   }
+
+   .loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+   }
+
+   @keyframes scale {
+    0%, 40%, 100% {
+     transform: scaleY(0.05);
+    }
+
+    20% {
+     transform: scaleY(1);
+    }
+   }
+
+   .dis{
+    display: none !important;
+   }
+
+
+   .face-images:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+#image-viewer {
+    width: 90%;
+    left: 5%;
+    top: 5%;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    overflow: auto;
+    background-color:transparent;
+}
+.modal-content2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.modal-content2 {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+#image-viewer .close {
+    position: absolute;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#image-viewer .close:hover,
+#image-viewer .close:focus {
+    color: #bbb;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content2 {
+        width: 100%;
+    }
+}
+
+.modal-content2 {
+
+    background-color: rgb(0,0,0);
+
+}
